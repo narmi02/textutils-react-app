@@ -14,9 +14,7 @@ export default function Textarea(props) {
 
   }
   const copyclick=()=>{
-    let text=document.getElementById("mybox")
-    text.select()
-    navigator.clipboard.writeText(text.value)
+    navigator.clipboard.writeText(text)
     props.showalert("copied text","success")
     document.getSelection().removeAllRanges()
   }
@@ -24,7 +22,6 @@ export default function Textarea(props) {
     let newtext=text.split(/[ ]+/)
     settext(newtext.join(" "))
     props.showalert("space removed!!","success")
-
   }
   
   const onchange=(event)=>{
@@ -34,7 +31,8 @@ export default function Textarea(props) {
   return (
     <>
      <div className='container mt-3' style={{color:props.mode=="dark"?"white":"black"}}>
-      <label htmlFor="exampleFormControlTextarea1" className="form-label">{props.text}</label>
+       <h3>Try TextUtils-Word Counter,Character Counter,Removes Extra Space</h3>
+      <label htmlFor="exampleFormControlTextarea1" className="form-label my-3">{props.text}</label>
     <textarea className="form-control mt-2" style={{backgroundColor:props.mode=="light"?"rgb(241, 242, 242)":"black",color:props.mode=="light"?"black":"white"}}  onChange={onchange} id="mybox" rows="9"></textarea>
        <button type="button" disabled={text.length===0} onClick={capclick}  className={`btn btn-outline-info mt-3 text-${props.mode=="dark"?"white":"black"} mx-2 my-1`}> Capitalize </button>
        <button type="button" disabled={text.length===0} onClick={lowclick}  className={`btn btn-outline-info mt-3 text-${props.mode=="dark"?"white":"black"} mx-2 my-1`}>Lowerize</button>

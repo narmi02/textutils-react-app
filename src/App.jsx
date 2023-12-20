@@ -5,8 +5,6 @@ import About from './components/About'
 import Alert from './components/Alert'
 import React, { useState } from 'react'
 import {
-  createBrowserRouter,
-  RouterProvider,
   BrowserRouter,
   Route,
   Routes

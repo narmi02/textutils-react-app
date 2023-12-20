@@ -1,21 +1,6 @@
 import React, { useState } from 'react'
 
 export default function About(props) {
-  // const [mystyle,setmystyle]=useState({
-  //       color:"white",
-  //       backgroundColor:"black"
-  // })
-  // const [btntext,setbtntext]=useState("Enable Light Mode")
-  // const toggle=()=>{
-  //   if(mystyle.color=="white"){
-  //     setmystyle({color:"black",backgroundColor:"white"})
-  //     setbtntext("Enable Dark Mode")
-  //   }
-  //   else {
-  //     setmystyle({color:"white",backgroundColor:"black"})
-  //     setbtntext("Enable Light Mode")
-  //   }
-  // }
   let mystyle={
     backgroundColor:props.mode=="light"?"white":"rgb(42, 61, 62)",
     color:props.mode=="dark"?"white":"black"
@@ -62,11 +47,7 @@ export default function About(props) {
            </div>
          </div>
        </div>
-
        </div>
-       {/* <div className="container">
-        <button type="button"  onClick={toggle} className={`btn btn-outline-info mt-3 text-${props.mode=="dark"?"light":"dark"} mx-2 my-1`}>{btntext}</button>
-       </div> */}
      </>
     
   ) 
